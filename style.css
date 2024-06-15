@@ -1,0 +1,847 @@
+/* Defining variables for color   */
+:root{
+    --main-color:#F5F5F5;
+    --nav-color:#FFFFFF;
+    --font-color:#3F2305;
+    --dim-font-color: #3f2305ab;
+
+}
+
+
+
+/* Setting Default css to 0  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Adding Smooth Scroll Behavior  */
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+/* Styling the body  */
+body{
+    font-family: monospace;
+    color: var(--font-color);
+}
+
+
+
+/* Designing the scroll bar */
+/* Webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 0.313rem; /* Width of the scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--main-color); /* Background of the scrollbar track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--font-color); /* Color of the scrollbar thumb */
+    border-radius: 0.25rem; /* Round corners of the scrollbar thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--dim-font-color); /* Dimmer color when hovering over the scrollbar thumb */
+  }
+
+  /* Firefox */
+  body {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: var(--font-color) var(--main-color); /* Thumb and track colors */
+}
+
+
+
+
+
+/* ----------------------------------------Styling the home section---------------------------------------------   */
+.home{
+    background-color: var(--main-color);
+    height: 100vh;
+}
+
+
+/* Styling the header  */
+.home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: var(--nav-color);
+    top: 0;
+    position: fixed;
+    width: calc(100% - 2.775rem);
+    background-color: rgba(255, 255, 255, 0.954);
+}
+
+
+/* Styling header logo  */
+.home-header .logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
+    color: #47382cdf;
+}
+
+/* Styling the navBar  */
+.home-header .navbar {
+    display: flex;
+    gap: 1.875rem;
+}
+
+/* Styling navbar list elements  */
+.home-header .navbar li {
+    list-style: none;
+}
+
+.home-header .navbar .hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+
+.home-header .navbar a{
+    text-decoration: none;
+    font-size: 1.188rem;
+    color: var(--font-color);
+    position: relative;
+
+}
+
+.home-header .navbar a::after{
+    content: '';
+  position: absolute;
+  width: 0;
+  height: 0.125rem;
+  display: block;
+  margin-top: 0.313rem;
+  left: 0;
+  background: var(--font-color);
+  transition: width 0.4s ease, right 0.4s ease;
+}
+
+.home-header .navbar a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+
+/* Styling the hamburger navbar  */
+.ham-nav{
+    position: absolute;
+    background-color: var(--nav-color);
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 16;
+    right: -200%;
+    transition: all 1s ease;
+    display: none;
+}
+
+.ham-nav img{
+    margin: 2rem 3rem 0rem 3rem;
+
+
+}
+
+.ham-nav li{
+    list-style: none;
+    margin: 2rem 3rem;
+
+}
+
+.ham-nav li a{
+    text-decoration: none;
+    font-size: 1.188rem;
+    color: var(--font-color);
+}
+
+
+/* Styling the home content  */
+.home-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 5.375rem);
+    gap: 2.5rem;
+
+}
+
+/* Styling the image in home content  */
+.home-content .image img{
+    width: 12.5rem;
+    border-radius:100% ;
+    border: 0.25rem solid;
+    box-shadow: 0 0.625rem 0.625rem rgba(0, 0, 0, 0.8);
+
+}
+
+
+/* Styling home text  */
+.home-content .home-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.home-content .home-text .heading{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+
+.home-content .home-text .sub-heading{
+    font-size:1.875rem ;
+}
+.home-content .home-text .end-text{
+    font-size: 1.25rem;
+    color: var(--dim-font-color);
+    margin-bottom: 1.25rem;
+}
+
+
+
+/* Styling the icons in the end text  */
+.home-content .home-text .end-text .fa-html5 {
+    color: rgb(255, 106, 0);
+    font-size: 1.6rem;
+}.home-content .home-text .end-text .fa-css3-alt {
+    color: rgb(0, 140, 255);
+    font-size: 1.6rem;
+}.home-content .home-text .end-text .fa-js {
+    color: #FFD43B;
+    font-size: 1.6rem;
+}
+/* -------------------------------------- */
+
+
+
+
+/* Styling the links  */
+.home-content .home-text .links{
+    display: flex;
+    gap: 1.25rem;
+    font-size: 1.875rem;
+}
+.home-content .home-text .links a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+.home-content .home-text .links a:hover{
+    color: var(--dim-font-color);
+}
+
+/* ----------------------------------------------Home Section End---------------------------------------------------  */
+
+
+
+
+
+
+/* ----------------------------------------Styling the about section---------------------------------------------   */
+.about{
+    background-color: var(--main-color);
+    height: 100vh;
+    
+}
+
+
+
+
+/* Styling the about content  */
+.about-content{
+    display: flex;
+    gap: 1.875rem;
+    width: 70vw;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+
+/* Styling about image  */
+.about-content .about-image img{
+    width: 18.75rem;
+    border: 0.313rem solid;
+    transform: rotate(-5deg);
+    box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Styling the text in about section  */
+.about-content .about-text{
+    font-size: 1.25rem;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+
+
+.about-content .about-text .heading{
+    font-size: 3.125rem;
+    font-weight: bold;
+}
+
+
+
+/* Highlighting the text  */
+.highlight{
+    background-color: yellow;
+}
+/* ----------------------------------------------About Section End---------------------------------------------------  */
+
+
+
+
+
+
+
+
+/* ----------------------------------------Styling the projects section---------------------------------------------   */
+.projects{
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+
+
+
+.projects .projects-content{
+    width: 80vw;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+/* Styling Project Cards */
+.projects .projects-content .project-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    background-color: var(--nav-color);
+    width: 23.75rem;
+    padding: 1.25rem;
+    border-radius: 0.563rem;
+    height: 30rem;
+    box-shadow: 0.313rem 0.313rem 2.5rem rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+/* Styling the content of the card */
+.projects .projects-content .project-card .card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.projects .projects-content .project-card .project-image{
+    width: 18.75rem;
+}
+
+/* Styling image of the card  */
+.projects .projects-content .project-card .project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+/* Styling card heading  */
+.projects .projects-content .project-card .project-heading{
+    font-size: 1.875rem;
+    font-weight:bold ;
+}
+
+
+
+
+/* Styling card text  */
+.projects .projects-content .project-card .project-text{
+    font-size: 0.938rem;
+}
+.projects .projects-content .project-card .project-link a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: var(--font-color);
+}
+.projects .projects-content .project-card .project-link a:hover{
+    color: var(--dim-font-color);
+}
+/* ----------------------------------------------Projects Section End---------------------------------------------------  */
+
+
+
+
+
+
+/* ----------------------------------------Styling the contact section---------------------------------------------   */
+.contact{
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+
+
+/* Styling the content in the contact section  */
+.contact-content{
+    height: 100%;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+
+
+/* Styling text of the contact section  */
+.contact-content .contact-text{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Styling heading of the contact text  */
+.contact-content .contact-text .contact-heading{
+    font-size: 4.375rem;
+}
+
+
+
+/* Styling subheading  */
+.contact-content .contact-text .contact-subheading{
+    font-size: 1.25rem;
+}
+
+
+
+
+
+/* styling the email box  */
+.contact-content .contact-text .email{
+    height: 5rem;
+    background-color: var(--nav-color);
+    width: 18.75rem;
+    padding: 0.313rem 1.25rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 1.375rem;
+    margin-top: 1.875rem;
+    border: 0.25rem solid;
+
+}
+.contact-content .contact-text .email .fa-envelope{
+    background-color: var(--main-color);
+    padding: 0.5rem;
+    border-radius: 0.563rem;
+}
+
+
+
+/* Styling contact form  */
+.contact-content .contact-form{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color);
+    padding: 1.875rem;
+    border-radius: 0.563rem;
+    box-shadow: 0.313rem 0.313rem 1.25rem rgba(0, 0, 0, 0.8);
+    gap: 0.938rem;
+}
+
+
+
+
+/* Styling form heading  */
+.contact-content .contact-form .form-heading{
+    font-size: 1.375rem;
+}
+
+
+
+
+/* Styling form body  */
+.contact-content .contact-form .form-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+
+
+
+/* Styling input fields */
+.contact-content .contact-form .form-body input{
+    padding: 0.625rem 1.25rem;
+    width: 21.875rem;
+    font-size: 1.063rem;
+    border-radius: 0.438rem;
+    color: var(--font-color);
+    background-color: var(--main-color);
+    border:none;
+    outline: none;
+}
+.contact-content .contact-form .form-body input:focus{
+    box-shadow: 0.313rem 0.313rem 1.25rem rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease-in-out;
+
+}
+.contact-content .contact-form .form-body input::placeholder{
+    color: var(--dim-font-color);
+}
+
+
+
+
+
+
+/* Styling the message box and its heading  */
+.contact-content .contact-form .form-body .message{
+    font-size: 1rem;
+}
+.contact-content .contact-form .form-body textarea{
+    border: none;
+    border-radius:0.563rem ;
+    background-color: var(--main-color);
+    height: 6.25rem;
+    padding: 0.625rem;
+    font-size: 1.063rem;
+    outline: none;
+    color: var(--dim-font-color);
+}
+.contact-content .contact-form .form-body textarea:focus{
+    border: 0.313rem solid;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Styling send message button  */
+.contact-content .contact-form .form-body .send-msg-btn{
+    padding:0.938rem 1.25rem;
+    font-size: 1rem;
+    width: 11.25rem;
+    border: none;
+    border-radius: 0.563rem;
+    background-color: var(--font-color);
+    color: var(--main-color);
+    cursor: pointer;
+
+}
+.contact-content .contact-form .form-body .send-msg-btn:hover{
+    background-color: var(--dim-font-color);
+    box-shadow: 0.313rem 0.313rem 1.25rem rgba(0, 0, 0, 0.8);
+    transition: all 0.5s ease-in-out;
+}
+/* ----------------------------------------------Contact Section End---------------------------------------------------  */
+
+
+
+
+
+
+
+/* ----------------------------------------Styling the footer section---------------------------------------------   */
+footer{
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.25rem;
+
+}
+
+
+/* Styling footer upward button  */
+footer .footer-to-home i{
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.563rem;
+    background-color: var(--main-color);
+    padding: 0.5rem;
+    border-radius:100% ;
+}
+
+footer .footer-to-home i:hover{
+    color: var(--dim-font-color);
+    box-shadow:  0 0 1.25rem  var(--font-color);
+    transition: all 0.5s ease-in-out;
+}
+/* ----------------------------------------------Footer Section End---------------------------------------------------  */
+
+
+
+
+
+/* -------------------------------------------ADDING RESPONSIVENESS----------------------------------------------  */
+
+
+
+/* ----------------------------------ADDING RESPONSIVENESS to max width 1150px ------------------------------------  */
+@media screen and (max-width: 1150px) {
+
+    /* resizing project cards  */
+    .projects .projects-content .project-card{
+        height: 30rem;
+        width: 17.5rem;
+    }
+
+
+
+    /* resizing contact section  */
+    .contact-content{
+        justify-content: space-between;
+    }
+
+
+    .contact-content .contact-text .contact-heading{
+        font-size: 3.125rem;
+    }
+
+    .contact-content .contact-text .contact-subheading{
+        font-size: 1rem;
+    }
+    
+    .contact-content .contact-text .email{
+        height: 4.375rem;
+        width: 15.625rem;
+        font-size: 1.125rem;
+    }
+
+    .contact-content .contact-form .form-body input{
+        width: 17.5rem;
+    }
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------ADDING RESPONSIVENESS to max width 950px ------------------------------------  */
+@media screen and (max-width: 950px) {
+    /* resizing about text  */
+    .about-content .about-text{
+        font-size: 1rem;
+    }
+    
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------ADDING RESPONSIVENESS to max width 850px ------------------------------------  */
+@media screen and (max-width: 850px) {
+
+    section {
+        margin-bottom: 2.5rem;
+    }
+
+    body{
+        background-color: var(--main-color);
+    }
+
+    .about-content .about-image img{
+        width: 12.75rem;
+        transform: rotate(0deg);
+    } 
+    .projects .projects-content{
+        flex-direction: column;
+        gap: 1.25rem;
+        
+    }
+
+    .projects .projects-content .project-card{
+        width: 100%;
+    }
+
+    .projects .projects-content .project-card .project-image{
+        width: 18.75rem;
+    }
+
+    .projects .projects-content .project-card .project-heading{
+        font-size: 1.25rem;
+    }
+
+    .projects .projects-content .project-card .project-link a{
+        font-size: 1rem;
+    }
+
+    .projects .projects-content .project-card .project-text{
+        font-size: 0.688rem;
+    }
+
+    .contact-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .contact-content .contact-text .contact-heading{
+        font-size: 2.375rem;
+    }
+    
+    .contact-content .contact-text .email{
+        height: 3.125rem;
+        width: 80%;
+        margin: 1.875rem auto 0 auto;
+        font-size: 1.125rem;
+    }
+
+    .contact-content .contact-form .form-body input{
+        width: 80%;
+    }
+
+
+    .contact-content .contact-form .form-body textarea{
+        height: 5rem;
+    }
+
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* ----------------------------------ADDING RESPONSIVENESS to max width 650px ------------------------------------  */
+@media screen and (max-width: 650px) {
+    
+    
+
+    .home-header .logo {
+        font-size: 2rem;
+    }
+    
+    .home-content .image img{
+        width: 8.5rem;
+    
+    }
+
+    .home-content .home-text .heading{
+        font-size: 2.5rem;
+    }
+
+    .home-content .home-text .sub-heading{
+        font-size:.975rem ;
+    }
+    .about-content .about-text{
+        font-size: 0.825rem;
+    }
+
+    .home-content .home-text .end-text{
+        font-size: .85rem;
+    }
+    .home-content .home-text .end-text .fa-brands{
+        font-size: .98rem;
+    }
+    .about-content .about-text .heading{
+        font-size: 2rem;
+    }
+    .home-header .navbar .hamburger{
+        display: inline-block;
+    }
+    .home-header .navbar li {
+        display: none;
+    }
+    .about-content{
+        flex-direction: column;
+
+    }
+    footer{
+        font-size: 0.938rem;
+    }
+    
+    
+
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------ADDING RESPONSIVENESS to max width 510px ------------------------------------  */
+@media screen and (max-width: 510px) {
+    .home-content .home-text .heading{
+        font-size: 1.8rem;
+    }
+    
+    .about-content .about-text{
+        font-size: 0.755rem;
+    }
+    .home-content .home-text .end-text{
+        font-size: .65rem;
+    }
+    .home-content .home-text .end-text .fa-brands{
+        font-size: .78rem;
+    }
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* ----------------------------------ADDING RESPONSIVENESS to max width 420px ------------------------------------  */
+
+
+@media screen and (max-width: 420px) {
+    .home-content{
+        flex-direction: column;
+    }
+    
+    .projects .projects-content .project-card .project-image{
+        width: 10rem;
+    }
+
+    .projects .projects-content .project-card{
+        height: auto;
+    }
+
+    .contact-content .contact-text .contact-heading{
+        font-size: 1.375rem;
+        text-align: center;
+    }
+    .about-content .about-image img{
+        width: 7.75rem;
+    }
+}
+/* ------------------------------------------------------------------------------------------------------- */
